@@ -390,6 +390,74 @@ p>strong{
 
 
 
+/* certificate section  */
+
+.certificat-section{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  h2{
+    width: 100%;
+    display: inline;
+    text-align: center;
+    color:var(--accent-clr);
+  }
+}
+
+.certificate {
+  
+ max-width:  400px;
+  
+  color: var(--text-clr);
+  
+ 
+}
+
+.certificate img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.certificate-name {
+ display: flex;
+ flex-direction: row;
+ padding: 10px;
+ justify-content: space-between;
+ border-radius: 8px 8px 0px 0px ;
+ background-color: var(--line-clr);
+ span{
+  font-weight: bold;
+  letter-spacing: 2px;
+ }
+ svg{
+  fill: var(--icon-fill-color);
+  cursor: pointer;
+ }
+}
+.certificate > div > img {
+  transition: 0.5s all ease-in-out;
+}
+
+.certificate > div > img:hover {
+  transform: scale(1.5); 
+  background-color: red;
+}
+
+
+.description {
+  display: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 10px;
+  color: var(--text-clr);
+  background-color: var(--line-clr);
+  border-radius: 0px 0px 8px 8px;
+  position: absolute;
+  max-width: 380px;
+}
 
 
 
@@ -471,8 +539,9 @@ textarea::placeholder,input::placeholder {
   background-color:blueviolet;
   color: white;
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
+  cursor: pointer;
 }
 
 
@@ -496,72 +565,3 @@ textarea::placeholder,input::placeholder {
 
 }
 
-
-/* certificate section  */
-
-.certificat-section{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 20px;
-  h2{
-    width: 100%;
-    display: inline;
-    text-align: center;
-    color:var(--accent-clr);
-  }
-}
-
-.certificate {
-  
- max-width:  400px;
-  
-  color: var(--text-clr);
-  
- 
-}
-
-.certificate img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-.certificate-name {
- display: flex;
- flex-direction: row;
- padding: 10px;
- justify-content: space-between;
- border-radius: 8px 8px 0px 0px ;
- background-color: var(--line-clr);
- span{
-  font-weight: bold;
-  letter-spacing: 2px;
- }
- svg{
-  fill: var(--icon-fill-color);
-  cursor: pointer;
- }
-}
-.certificate > div > img {
-  transition: 0.5s all ease-in-out;
-}
-
-.certificate > div > img:hover {
-  transform: scale(1.5); 
-  background-color: red;
-}
-
-
-.description {
-  display: none;
-  margin-bottom: 20px;
-  font-size: 14px;
-  padding: 10px;
-  color: var(--text-clr);
-  background-color: var(--line-clr);
-  border-radius: 0px 0px 8px 8px;
-  position: absolute;
-  max-width: 380px;
-}
