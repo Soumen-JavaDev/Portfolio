@@ -1,0 +1,149 @@
+
+@media(max-width: 800px){
+    body{
+      grid-template-columns: 1fr;
+    }
+    main{
+      padding: 2em 1em 60px 1em;
+    }
+    .container{
+      border: none;
+      padding: 0;
+    }
+    #sidebar{
+      height: 60px;
+      width: 100%;
+      border-right: none;
+      border-top: 1px solid var(--line-clr);
+      padding: 0;
+      position: fixed;
+      top: unset;
+      bottom: 0;
+  
+      > ul{
+        padding: 0;
+        display: grid;
+        grid-auto-columns: 60px;
+        grid-auto-flow: column;
+        align-items: center;
+        overflow-x: scroll;
+        
+      }
+      ul li{
+        height: 100%;
+        
+      }
+      ul a, ul .dropdown-btn{
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        border-radius: 0;
+        justify-content: center;
+      }
+  
+      ul li span, ul li:first-child, .dropdown-btn svg:last-child{
+        display: none;
+      }
+  
+      ul li .sub-menu.show{
+        position: fixed;
+        bottom: 60px;
+        left: 0;
+        box-sizing: border-box;
+        height: 60px;
+        width: 100%;
+        background-color: var(--hover-clr);
+        border-top: 1px solid var(--line-clr);
+        display: flex;
+        justify-content: center;
+  
+        > div{
+          overflow-x: auto;
+        }
+        li{
+          display: inline-flex;
+        }
+        a{
+          box-sizing: border-box;
+          padding: 1em;
+          width: auto;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  /* hero -section  */
+  @media (max-width: 768px) {
+    .hero-content>h1{
+      font-size: 2.5rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
+      margin-bottom: rem;
+     }
+  
+    .hero-content>p {
+        font-size: 1.2rem;
+    }
+  
+     .buttons>a {
+        padding: 0.5rem 1rem;
+    }
+  
+    .links a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+  }
+
+  /* footer section  */
+
+  @media(max-width: 978px){
+    .contact-main{
+     display: flex;
+     flex-direction: column;
+     
+    }
+    
+    #contact>h1{
+      padding: 0;
+      margin: 0;
+      font-size: 2.3rem;
+    }
+    .contact-detelis{
+         width: 100%;
+         display: flex;
+         
+    }
+    .contact-detelis-item{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    .contact-form{
+      width: 90%;
+      margin: auto;
+      
+    }
+   
+    .contact-info-item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      
+    }
+  }
+  @media(max-width:768px){
+    .certificate > div > img:hover {
+      transform: scale(1.05); 
+      background-color: red;
+    }
+    
+  }

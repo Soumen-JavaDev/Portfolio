@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soumen Portfolio</title>
+
+
+  <!-- css style file  -->
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- css media file  -->
+  <link rel="stylesheet" href="styles/media.css">
+
+  <script type="text/javascript" src="app.js" defer></script>
+</head>
+
+<body>
+
+
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logose">SOUMEN MONDAL</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+          </svg>
+        </button>
+      </li>
+      <li>
+        <a href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="27px" fill="#e8eaed">
+            <path
+              d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z" />
+          </svg>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="27px" fill="#e8eaed">
+            <path
+              d="M440-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560ZM884-20 756-148q-21 12-45 20t-51 8q-75 0-127.5-52.5T480-300q0-75 52.5-127.5T660-480q75 0 127.5 52.5T840-300q0 27-8 51t-20 45L940-76l-56 56ZM660-200q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm-540 40v-111q0-34 17-63t47-44q51-26 115-44t142-18q-12 18-20.5 38.5T407-359q-60 5-107 20.5T221-306q-10 5-15.5 14.5T200-271v31h207q5 22 13.5 42t20.5 38H120Zm320-480Zm-33 400Z" />
+          </svg>
+          <span>About Me</span>
+        </a>
+      </li>
+      <li>
+        <a href="#skills">
+          <svg xmlns="http://www.w3.org/2000/svg" height="27" viewBox="0 0 24 24" width="27" fill="#e8eaed">
+            <path
+              d="M12 2l2.39 4.85L20 8.64l-3.64 3.54L17.57 18 12 15.27 6.43 18l1.21-5.82L4 8.64l5.61-.79L12 2zm-7.6 17.88l1.43-1.42 2.83 2.83 5.66-5.66 1.42 1.41-7.08 7.08-3.26-3.24z" />
+          </svg>
+
+          <span>Skills</span>
+        </a>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#e8eaed">
+            <path
+              d="M19 3h-4.18C14.4 2.42 13.73 2 13 2h-2c-.73 0-1.4.42-1.82 1H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h4.08c.19-.58.76-1 1.42-1h2c.66 0 1.23.42 1.42 1H19v14zM8 7h8v2H8V7zm0 4h8v2H8v-2zm0 4h8v2H8v-2z" />
+          </svg>
+
+
+          <span>Projects</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+          </svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#full_stack_project">Full-Stack</a></li>
+            <li><a href="#frontend-project">Frontend</a></li>
+            <li><a href="#backend-project">Backend</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="m387-412 35-114-92-74h114l36-112 36 112h114l-93 74 35 114-92-71-93 71ZM240-40v-309q-38-42-59-96t-21-115q0-134 93-227t227-93q134 0 227 93t93 227q0 61-21 115t-59 96v309l-240-80-240 80Zm240-280q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70ZM320-159l160-41 160 41v-124q-35 20-75.5 31.5T480-240q-44 0-84.5-11.5T320-283v124Zm160-62Z" />
+          </svg>
+          <span>Certifications</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+          </svg>
+        </button>
+
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#fontend_development">Web Development</a></li>
+            <li><a href="#backend_development">Backend Development</a></li>
+            
+            <li><a href="#additional_skills">Additional Skills</a></li>
+            
+          </div>
+        </ul>
+      </li>
+
+
+      <li>
+        <a href="assist/Resume.pdf" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+            class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+            <path
+              d="M6 1a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V2a1 1 0 0 0-1-1H6zm0 1h4v2H6V2zm5 4v1H5V6h6zm0 2v1H5V8h6zm-6 2h6v1H5v-1z" />
+          </svg>
+
+
+          <span>Resume</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="22px" fill="#e8eaed">
+            <path
+              d="M560-520h280v-200H560v200Zm140-50-100-70v-40l100 70 100-70v40l-100 70ZM80-120q-33 0-56.5-23.5T0-200v-560q0-33 23.5-56.5T80-840h800q33 0 56.5 23.5T960-760v560q0 33-23.5 56.5T880-120H80Zm556-80h244v-560H80v560h4q42-75 116-117.5T360-360q86 0 160 42.5T636-200ZM360-400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM182-200h356q-34-38-80.5-59T360-280q-51 0-97 21t-81 59Zm178-280q-17 0-28.5-11.5T320-520q0-17 11.5-28.5T360-560q17 0 28.5 11.5T400-520q0 17-11.5 28.5T360-480Zm120 0Z" />
+          </svg>
+
+
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+
+
+
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <h1 style="color: rgba(0, 255, 119, 0.806);">
+          <small style="font-family:Arial, Helvetica, sans-serif;">Hi I'm</small>
+          Soumen Mondal
+        </h1>
+        <p>A Passionate,<span id="element"></span></p>
+        <div class="buttons">
+          <a href="#projects">View Projects</a>
+          <a href="#contact">Hire Me</a>
+        </div>
+        <div class="links">
+          <a href="https://leetcode.com/u/Soumen_JavaDev/" target="_blank">
+            <img src="assist/leetcode.svg" alt="leetcode">
+          </a>
+          <a href="https://github.com/Soumen-JavaDev" target="_blank">
+            <img src="assist/github.svg" alt="GitHub" /></a>
+
+          <a href="https://www.linkedin.com/in/soumen-mondal-99362b246/" target="_blank"><img height="35px" width="35px"
+                                                                                              src="assist/linkedin.png" alt="linkedin"></a>
+
+
+          <a href="https://www.geeksforgeeks.org/user/soumenmoney3f/"><img src="assist/gfg.svg" alt=""></a>
+
+
+
+        </div>
+      </div>
+
+    </section>
+    <section class="logos container">
+      <div class="marquee">
+        <div class="track">
+          <img src="assist/scrallbar/aws.png" alt="HTML" />
+          <img src="assist/scrallbar/css.png" alt="CSS" />
+          <img src="assist/scrallbar/dsa.png" alt="mysql" />
+          <img src="assist/scrallbar/git.png" alt="JS" />
+          <img src="assist/scrallbar/bootstrap.png" alt="bootstrap" />
+          <img src="assist/scrallbar/hibernate.png" alt="Java" />
+          <img src="assist/scrallbar/html.png" alt="git" />
+          <img src="assist/scrallbar/intellij.png" alt="HTML" />
+          <img src="assist/scrallbar/java.png" alt="Hibernate" />
+          <img src="assist/scrallbar/js.png" alt="Dsa" />
+          <img src="assist/scrallbar/linux.png" alt="VS Code" />
+          <img src="assist/scrallbar/maven.png" alt="Intellij" />
+          <img src="assist/scrallbar/mysql.png" alt="maven" />
+          <img src="assist/scrallbar/python.png" alt="linux" />
+          <img src="assist/scrallbar/react.png" alt="mysql" />
+          <img src="assist/scrallbar/spring.png" alt="Spring" />
+          <img src="assist/scrallbar/vscode.png" alt="Java" />
+          <img src="assist/scrallbar/java.png" alt="Dsa" />
+          <img src="assist/scrallbar/spring.png" alt="HTML" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div id="about">
+        <h1 class="head-line">About Me</h1>
+
+        <h4>Hello! I'm</h4>
+        <h3> <strong>Soumen Mondal,</strong> <span>Java Full Stack Developer</span></h3>
+
+        <p>I am passionate about building web applications that solve real-world problems using my expertise in
+          <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
+          <strong>Bootstrap</strong>, and <strong>MySQL</strong>. With hands-on experience in both front-end and
+          back-end technologies, I enjoy developing fully functional and responsive web applications.
+        </p>
+
+        <p>Over the years, I have worked on various projects, ranging from a <strong>social media platform</strong> to
+          creating interactive user interfaces based on design layouts. I have also developed algorithms and data
+          structures to optimize the performance of my applications, making them efficient and scalable.</p>
+
+        <p>In addition to my coding journey, I am always looking for ways to improve my communication skills, especially
+          in <strong>Spoken English</strong>.</p>
+
+        <p>Let’s connect and explore how I can contribute to your next project! Feel free to check out my work on <a
+            href="https://github.com/Soumen-JavaDev/Problem_solution_java" target="_blank"
+            class="text-primary"><strong>GitHub</strong></a> and connect with me on <a
+            href="https://www.linkedin.com/in/soumen-mondal-99362b246" target="_blank"><strong>LinkedIn</strong></a>.
+        </p>
+
+      </div>
+
+
+
+    </section>
+
+    <section class="container">
+      <h1 class="head-line">
+        Skills
+      </h1>
+      <div id="skills">
+        <div class="skill-item">
+          <img src="assist/scrallbar/java.png" alt="java">
+          <h4>JAVA</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/html.png" alt="html">
+          <h4>HTML</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/css.png" alt="CSS">
+          <h4>css</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/js.png" alt="JS">
+          <h4>javaScript</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/react.png" alt="React">
+          <h4>React</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/bootstrap.png" alt="Bootstrap">
+          <h4>Bootstrap</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/spring.png" alt="Spring Boot">
+          <h4>Spring Boot</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/hibernate.png" alt="Hibernate">
+          <h4>Hibernate</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/maven.png" alt="Maven">
+          <h4>Maven</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/dsa.png" alt="Data Structure">
+          <h4>Data Structure</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/mysql.png" alt="MySQL">
+          <h4>MySQL</h4>
+        </div>
+        <div class="skill-item">
+          <img src="assist/scrallbar/aws.png" alt="AWS EC2">
+          <h4>AWS EC2</h4>
+        </div>
+
+      </div>
+    </section>
+    <section class="container">
+      <div id="projects">
+        <div id="full_stack"></div>
+        <div id="frontend"></div>
+        <div id="backend"></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h1 class="head-line">Certifications </h1>
+      <div id="certifications">
+        <div id="fontend_development" class="certificat-section">
+          <h2 >Font-End Technology</h2>
+
+          
+          <div class="certificate">
+            <div><img src="assist/Certifications/HTML.jpg" alt="Certificate 1"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(1)">
+              <span>HTML</span>
+
+              <!-- SVG Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-1" class="description">
+              
+              <h4>Provider: Great Learning</h4>
+              
+              This course covers the foundational aspects of HTML, the backbone of web development. It introduces core HTML concepts, including elements, tags, and attributes, and teaches how to structure content on the web effectively. Through hands-on exercises and guided examples, I learned to create well-structured webpages with text, images, lists, and links. The course also touched on best practices in web development and introduced HTML5 features for enhanced functionality.
+              
+              Completion of this course provided a solid foundation in HTML, equipping me with the skills to build static webpages and laying the groundwork for further learning in CSS, JavaScript, and other web technologies.
+            </div>
+          </div>
+
+          
+          <div class="certificate">
+            <div><img src="assist/Certifications/CSS.jpg" alt="Certificate 2"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(2)">
+              <span> Certified in CSS</span>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-2" class="description">
+              <h4>Provider: Great Learning</h4>
+              I hold a certification in CSS, which is essential for creating visually engaging and responsive web pages.
+              My expertise includes styling web layouts with Flexbox, Grid, and responsive design techniques. I am
+              proficient in crafting user-friendly interfaces, ensuring cross-browser compatibility, and optimizing
+              performance through efficient CSS techniques. I also have experience with animations, transitions, and
+              integrating CSS with popular frameworks like Bootstrap to create modern, dynamic websites.
+            </div>
+          </div>
+          <div class="certificate">
+            <div><img src="assist/Certifications/javaScript.png" alt="Certificate 2"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(4)">
+              <span> Certified in JavaScript</span>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-4" class="description">
+              <h4>Provider: Power of JavaScript by Scaler</h4>
+              This course, recognized with a Certificate of Excellence, covered the fundamentals and advanced aspects of JavaScript. It included 70 video tutorials, 9 modules, and 8 challenges, focusing on unlocking JavaScript’s potential for web development. Through structured lessons and practical challenges, I gained in-depth knowledge of JavaScript, empowering me to build dynamic and interactive web applications.<br/>
+
+Completion Date: 20 December 2023.
+            </div>
+          </div>
+          <div class="certificate">
+            <div><img src="assist/Certifications/React js.jpg" alt="Certificate 2"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(3)">
+              <span> Certified in ReactJS</span>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-3" class="description">
+              <h4>Provider: ITRONIX SOLUTIONS</h4>
+              The React course at Itronix Solutions covers all essential aspects of building user interfaces with ReactJS. It begins with setting up the development environment and includes topics such as JSX, component creation, state management, and props. The course also delves into React lifecycle methods, hooks, form handling, conditional rendering, and state management using Redux. In addition, it touches on advanced topics like performance optimization, context API, and error handling. The course culminates in a project, giving learners hands-on experience with React​
+              ITRONIX SOLUTIONS
+              .
+            </div>
+          </div>
+
+          
+        </div>
+        <div id="backend_development"class="certificat-section">
+          <h2 >BackEnd Technology</h2>
+
+          
+          <div class="certificate">
+            <div><img src="assist/Certifications/java.jpeg" alt="java"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(5)">
+              <span>JAVA</span>
+
+              <!-- SVG Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-5" class="description">
+              
+              <h4>Provider: Great Learning</h4>
+              Java is my primary programming language, and I've built a strong foundation in it through various projects and hands-on experience. With Java, I focus on creating scalable, efficient applications that follow object-oriented principles. I’m skilled in using Java for backend development, working with frameworks like Spring Boot, and connecting applications to databases. My Java projects showcase my ability to solve complex problems and build robust applications, highlighting my expertise in coding, debugging, and optimizing Java-based software.
+            </div>
+          </div>
+
+          
+          <div class="certificate">
+            <div><img src="assist/Certifications/sqlc.jpeg" alt="SQL"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(6)">
+              <span> Certified in SQL</span>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-6" class="description">
+              <h4>Provider: Great Learning</h4>
+              "I recently completed an SQL course on the Great Learning platform, which strengthened my skills in managing and querying relational databases. The course covered essential SQL operations, such as data retrieval (SELECT), insertion (INSERT), updating (UPDATE), and deletion (DELETE). I also learned about database structure creation, optimizing queries, and managing user permissions. This training has given me a strong foundation in data handling, crucial for backend development and data-driven applications.
+            </div>
+          </div>
+       
+
+        </div>
+        <div id="additional_skills"class="certificat-section">
+          <h2 >Additional Skills</h2>
+
+          
+          <div class="certificate">
+            <div><img src="assist/Certifications/AWS.jpg" alt="Certificate 1"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(9)">
+              <span>AWS EC2</span>
+
+              <!-- SVG Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-9" class="description">
+              
+              <h4>Provider:DH Technologies</h4>
+              AWS EC2 (Amazon Elastic Compute Cloud) is a service that provides scalable virtual servers in the cloud, known as instances. It enables users to run applications on-demand without needing physical hardware. EC2 allows full customization of instance configurations, including storage, memory, and processing power. Users can scale instances up or down as needed, making it suitable for applications with variable workloads. EC2 integrates with other AWS services, and its flexible pricing options (e.g., on-demand, reserved, spot instances) allow cost-effective resource management.
+            </div>
+          </div>
+
+          
+          <div class="certificate">
+            <div><img src="assist/Certifications/dsa.jpg" alt="Certificate 2"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(10)">
+              <span> Data Structures and Algorithms</span>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-10" class="description">
+              <h4>Provider: Great Learning</h4>
+              Data Structures and Algorithms (DSA) is a crucial field in computer science that focuses on the efficient organization and manipulation of data to solve computational problems.<br/>
+
+              Data Structures are specialized formats for organizing, processing, and retrieving data. Examples include arrays, linked lists, stacks, queues, trees, and graphs.<br/>
+              
+              Algorithms are sequences of steps designed to solve specific problems or perform operations on data structures. Key algorithms include sorting, searching, and traversing techniques.
+            </div>
+          </div>
+          <div class="certificate">
+            <div><img src="assist/Certifications/full stack software developer.jpg" alt="Certificate 2"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(11)">
+              <span> Full Stack Develper</span>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-11" class="description">
+              <h4>Provider:Itfonixsolutions</h4>
+              This is a basic traning for how start a journey for full Full-Stack developed.
+            </div>
+          </div>
+          <div class="certificate">
+            <div><img src="assist/Certifications/rode map.png" alt="Certificate 2"></div>
+
+            <div class="certificate-name" onclick="toggleDescription(12)">
+              <span> Certified in ReactJS</span>
+
+
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+
+            </div>
+            <div id="description-12" class="description">
+              <h4>Provider: scaler</h4>
+              This is a Road map beffor start a full Stack Developement.
+              .
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="achievements"></div>
+    </section>
+
+    <footer id="contact" class="container">
+      <h1 class="head-line">Contact Me</h1>
+      <div class="contact-main">
+        <div class="contact-detelis">
+          <h2>Contact Details</h2>
+
+          <div class="contact-detelis-item">
+
+
+            <div class="contact-info-item ">
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                fill="#EA33F7">
+                <path
+                  d="M796-120q-119 0-240-55.5T333-333Q231-435 175.5-556T120-796q0-18.86 12.57-31.43T164-840h147.33q14 0 24.34 9.83Q346-820.33 349.33-806l26.62 130.43q2.05 14.9-.62 26.24-2.66 11.33-10.82 19.48L265.67-530q24 41.67 52.5 78.5T381-381.33q35 35.66 73.67 65.5Q493.33-286 536-262.67l94.67-96.66q9.66-10.34 23.26-14.5 13.61-4.17 26.74-2.17L806-349.33q14.67 4 24.33 15.53Q840-322.27 840-308v144q0 18.86-12.57 31.43T796-120ZM233-592l76-76.67-21-104.66H187q3 41.66 13.67 86Q211.33-643 233-592Zm365.33 361.33q40.34 18.34 85.84 29.67 45.5 11.33 89.16 13.67V-288l-100-20.33-75 77.66ZM233-592Zm365.33 361.33Z" />
+              </svg>
+              <h4>Call Us On</h4>
+              <a href="tel:+917584029453">
+                <p>+91 7584029453</p>
+              </a>
+            </div>
+
+
+            <div class="contact-info-item ">
+              <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="30px"
+                fill="#EA33F7">
+                <path
+                  d="M142.15-154.02q-27.6 0-47.86-20.27-20.27-20.26-20.27-47.86v-515.7q0-27.7 20.27-48.03 20.26-20.34 47.86-20.34h675.7q27.7 0 48.03 20.34 20.34 20.33 20.34 48.03v515.7q0 27.6-20.34 47.86-20.33 20.27-48.03 20.27h-675.7ZM480-454.35l-337.85-223v455.2h675.7v-455.2L480-454.35Zm0-65.5 333.85-218h-666.7l332.85 218Zm-337.85-157.5v-60.5 515.7-455.2Z" />
+              </svg>
+              <h4>Email</h4>
+              <a href="mailto:soumenmondal7584@gmail.com">
+                <p>soumenmondal7584@gmail.com</p>
+              </a>
+            </div>
+
+
+            <div class="contact-info-item ">
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="35" fill="#EA33F7"
+                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 3.16 6 11 7 11s7-7.84 7-11c0-3.87-3.13-7-7-7zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+              </svg>
+              <h4>Address</h4>
+              <p>Bankura,West Bengal,India</p>
+            </div>
+
+
+            <div class="contact-info-item ">
+              <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 900 960" width="40px"
+                fill="#75FB4C">
+                <path
+                  d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-40-82v-78q-33 0-56.5-23.5T360-320v-40L168-552q-3 18-5.5 36t-2.5 36q0 121 79.5 212T440-162Zm276-102q20-22 36-47.5t26.5-53q10.5-27.5 16-56.5t5.5-59q0-98-54.5-179T600-776v16q0 33-23.5 56.5T520-680h-80v80q0 17-11.5 28.5T400-560h-80v80h240q17 0 28.5 11.5T600-440v120h40q26 0 47 15.5t29 40.5Z" />
+              </svg>
+              <h4>Website</h4>
+              <p>on the ways/</p>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="contact-form">
+          <h2>SEND ME AN EMAIL</h2>
+          <form target="_blank" action="https://formsubmit.co/soumenmondal7584@gmail.com" method="POST">
+
+            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+
+            <input type="text" name="subject" placeholder="Subject" class="form-control" required>
+            <textarea placeholder="Your Message" class="form-control" name="message" rows="10"></textarea>
+
+            <button type="submit" class="form-btn">Submit Form</button>
+          </form>
+
+        </div>
+      </div>
+
+
+    </footer>
+  </main>
+
+
+  <!-- Theme toggle  -->
+  <button id="theme-toggle">
+
+    <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+      fill="#e8eaed" style="display: none;">
+      <path
+        d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z" />
+    </svg>
+
+    <svg id="light-icon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+      fill="#e8eaed">
+      <path
+        d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-146 93-257.5T410-880q-18 99 11 193.5T521-521q71 71 165.5 100T880-410q-26 144-138 237T484-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T464-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Zm-20-305Z" />
+    </svg>
+  </button>
+  <div class="copyright">
+    <center>
+      &copy; <span id="year"></span> Soumen Mondal. All rights reserved.
+    </center>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#element", {
+        strings: [
+            "<i>Software Developer</i>",
+            "&amp; Java Full Stack Developer"
+        ],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true
+    });
+  </script>
+
+
+</body>
+
+</html>
