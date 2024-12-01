@@ -14,12 +14,11 @@
   <!-- css media file  -->
   <link rel="stylesheet" href="styles/media.css">
 
-  <script type="text/javascript" src="app.js" defer></script>
 </head>
 
 <body>
 
-
+        <!-- sidebar sections -->
   <nav id="sidebar">
     <ul>
       <li>
@@ -32,7 +31,7 @@
         </button>
       </li>
       <li>
-        <a href="index.html">
+        <a href="#homesection">
           <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="27px" fill="#e8eaed">
             <path
               d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z" />
@@ -50,7 +49,7 @@
         </a>
       </li>
       <li>
-        <a href="#skills">
+        <a href="#slills-section">
           <svg xmlns="http://www.w3.org/2000/svg" height="27" viewBox="0 0 24 24" width="27" fill="#e8eaed">
             <path
               d="M12 2l2.39 4.85L20 8.64l-3.64 3.54L17.57 18 12 15.27 6.43 18l1.21-5.82L4 8.64l5.61-.79L12 2zm-7.6 17.88l1.43-1.42 2.83 2.83 5.66-5.66 1.42 1.41-7.08 7.08-3.26-3.24z" />
@@ -135,8 +134,8 @@
   <main>
 
 
-
-    <section class="hero container">
+        <!-- hero section  -->
+    <section class="hero container" id="homesection">
       <div class="hero-content">
         <h1>Welcome to My Portfolio</h1>
         <h1 style="color: rgba(0, 255, 119, 0.806);">
@@ -159,7 +158,7 @@
                                                                                               src="assist/linkedin.png" alt="linkedin"></a>
 
 
-          <a href="https://www.geeksforgeeks.org/user/soumenmoney3f/"><img src="assist/gfg.svg" alt=""></a>
+          <a href="https://www.geeksforgeeks.org/user/soumenmoney3f/" target="_blank"><img src="assist/gfg.svg" alt=""></a>
 
 
 
@@ -167,6 +166,8 @@
       </div>
 
     </section>
+
+      <!-- skills logo section -->
     <section class="logos container">
       <div class="marquee">
         <div class="track">
@@ -192,7 +193,7 @@
         </div>
       </div>
     </section>
-
+     <!-- About section  -->
     <section class="container">
       <div id="about">
         <h1 class="head-line">About Me</h1>
@@ -224,12 +225,12 @@
 
 
     </section>
-
-    <section class="container">
+          <!-- skills section  -->
+    <section class="container" id="slills-section">
       <h1 class="head-line">
         Skills
       </h1>
-      <div id="skills">
+      <div class="skills-item-container">
         <div class="skill-item">
           <img src="assist/scrallbar/java.png" alt="java">
           <h4>JAVA</h4>
@@ -281,14 +282,33 @@
 
       </div>
     </section>
+
+    <!-- project section  -->
     <section class="container">
       <div id="projects">
         <div id="full_stack"></div>
-        <div id="frontend"></div>
+        <div id="frontend">
+            <div class="project_item">
+                <h2>Bootstrap UI Design</h2>
+                <p>using </p>
+                 <ul>
+                  <li>
+                      HTML
+                  </li>
+                  <li>
+                      CSS
+                  </li>
+                  <li>
+                      Bootstrap
+                  </li>
+                  
+                 </ul>
+            </div>
+        </div>
         <div id="backend"></div>
       </div>
     </section>
-
+      <!-- certificat-section  -->
     <section class="container">
       <h1 class="head-line">Certifications </h1>
       <div id="certifications">
@@ -511,6 +531,7 @@ Completion Date: 20 December 2023.
       <div id="achievements"></div>
     </section>
 
+    <!-- contact section  -->
     <footer id="contact" class="container">
       <h1 class="head-line">Contact Me</h1>
       <div class="contact-main">
@@ -609,13 +630,14 @@ Completion Date: 20 December 2023.
         d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-146 93-257.5T410-880q-18 99 11 193.5T521-521q71 71 165.5 100T880-410q-26 144-138 237T484-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T464-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Zm-20-305Z" />
     </svg>
   </button>
+  <!-- copyright -->
   <div class="copyright">
     <center>
       &copy; <span id="year"></span> Soumen Mondal. All rights reserved.
     </center>
   </div>
-
-
+   
+  <script type="text/javascript" src="app.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     var typed = new Typed("#element", {
