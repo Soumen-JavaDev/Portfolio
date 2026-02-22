@@ -565,3 +565,132 @@ textarea::placeholder,input::placeholder {
 
 }
 
+
+
+/* Project Container */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+}
+
+/* Individual Project Card */
+.project_item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eef0f2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover Effect */
+.project_item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #007bff;
+}
+
+/* Titles */
+.project_item h2 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+/* Descriptions */
+.project_item p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+/* Technology List (Skills) */
+.project_item ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project_item ul li {
+    background: #e7f1ff;
+    color: #007bff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* Category Headers */
+#full_stack::before, #frontend::before, #backend::before {
+    content: attr(id);
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #888;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+}
+/* Container for buttons at the bottom of the card */
+.project_links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Base button style */
+.btn {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1; /* Makes buttons equal width */
+}
+
+/* GitHub Button - Dark Style */
+.repo {
+    background-color: #24292e;
+    color: white;
+    border: 1px solid #24292e;
+}
+
+.repo:hover {
+    background-color: #444;
+}
+
+/* Demo Button - Outline Style */
+.demo {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.demo:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Add a subtle "Zoom" effect to the tags you have in the screenshot */
+.project_item ul li {
+    transition: transform 0.2s ease;
+    cursor: default;
+}
+
+.project_item ul li:hover {
+    transform: scale(1.1);
+}
